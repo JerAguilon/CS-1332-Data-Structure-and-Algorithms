@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<script>var __pbpa = true;</script><script>var translated_warning_string = 'Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?';</script><script type="text/javascript" language="javascript" src="http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=4407ac63b04a974114891da19b333539"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name='text:Disqus Shortname' content='mongodbblog' />
+  <title>
+    MongoDB Blog
+  </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="MongoDB Blog" />
+  <meta property="og:title" content="MongoDB.org Community Blog" />     
+  <meta property="og:url" content="http://blog.mongodb.org" />
+  <meta property="og:image" content="https://media.mongodb.org/ico/icon-leaf.png" />
+  <style>figure{margin:0}</style>
+<link rel="icon" href="http://mms.mongodb.com/static/images/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://media.mongodb.org.s3.amazonaws.com/ico/favicon.ico" type="image/x-icon" />
+  <meta property="og:image" content="http://24.media.tumblr.com/avatar_7d391eb913cd_128.png"/>
+  <meta property="og:image:secure_url" content="http://24.media.tumblr.com/avatar_7d391eb913cd_128.png" />
+  <!-- JS -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst"></script>
+  <script type='text/javascript'>
+ var googletag = googletag || {};
+ googletag.cmd = googletag.cmd || [];
+ (function() {
+   var gads = document.createElement('script');
+   gads.async = true;
+   gads.type = 'text/javascript';
+   var useSSL = 'https:' == document.location.protocol;
+   gads.src = (useSSL ? 'https:' : 'http:') +
+               '//www.googletagservices.com/tag/js/gpt.js';
+   var node = document.getElementsByTagName('script')[0];
+   node.parentNode.insertBefore(gads, node);
+ })();
+</script>
+<script type='text/javascript'>
+ googletag.cmd.push(function() {
+   googletag.defineSlot('/40039723/Docs', [[243, 202], [293, 244]],
+                        'div-gpt-ad-1389988495352-0').addService(googletag.pubads());
+   googletag.pubads().enableSingleRequest();
+   googletag.enableServices();
+ });
+</script>
+  <!-- CSS -->
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+  <style type="text/css">
+
+  html, body {
+    height: 100%;
+    font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: #f5f6f7;
+    letter-spacing: .02em;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a, a:hover, a:focus {
+    color: #64a70b;
+    text-decoration: none;
+
+  }
+
+  h3,
+  h3:hover,
+  h3 a,
+  h3 a:hover {
+    font-weight: bold;
+    color: #6ba442;
+    margin-bottom: 0;
+  }
+
+  h4,
+  h4:hover,
+  h4 a,
+  h4 a:hover {
+    font-weight: bold;
+    color: #6ba442;
+    margin-bottom: 0;
+  }
+
+  #page {
+    min-height: 100%;
+  }
+
+  .container {
+    max-width: 1024px;
+    min-width: 640px;
+  }
+
+  .container.main {
+    padding-top: 24px;
+  }
+
+  .navbar {
+    margin-right: 0;
+    top: 0;
+    min-height: 54px;
+    border: none;
+  }
+
+  .navbar-right.navbar-collapse.in,
+  .navbar-right.navbar-collapse.collapsing {
+    display: block;
+    width: 100%;
+    background: #615f5f;
+    position: fixed;
+    top: 74px;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .navbar-right.navbar-collapse.in li,
+  .navbar-right.navbar-collapse.collapsing li {
+    margin: 0;
+  }
+
+  .navbar-right.navbar-collapse.in li a ,
+  .navbar-right.navbar-collapse.collapsing li a,
+  .navbar-right.navbar-collapse.in li.signup a,
+  .navbar-right.navbar-collapse.in li.login a,
+  .navbar-right.navbar-collapse.collapsing li.signup a,
+  .navbar-right.navbar-collapse.collapsing li.login a {
+    margin: 0;
+    padding: 12px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background: none;
+    text-transform: uppercase;
+    border: none;
+    box-shadow: none;
+  }
+
+  .navbar-inner {
+    position: fixed;    
+    background: #fff;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    filter: none;
+    height: 74px;
+    width: 100%;
+  }
+
+  .navbar .brand {
+    padding: 0;
+    margin: 10px 0 18px 0;
+    width: 130px;
+    text-shadow: none;
+    text-indent: -9999px;
+    display: inline-block;
+  }
+
+  .navbar .brand img {
+    float: left;
+  }
+  .slogan {
+    color: #807f7f;
+    margin: 18px 0px;
+    padding-left: 12px;
+    font-size: 15px;
+    line-height:17px;
+    letter-spacing: normal;
+  }
+
+  .navbar-fixed-top .navbar-inner, 
+  .navbar-static-top .navbar-inner {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .navbar .navbar-right {
+    float: right;
+    margin-top: 23px;
+  }
+
+  .navbar .navbar-right li {
+    margin-right: 7px;
+  }
+
+  .navbar .navbar-right li.login {
+    margin-right: 0;
+  }
+
+  .navbar .navbar-right li a {
+    color: #fff;
+    text-shadow: none;
+    font-weight: bold;
+    padding: 5px 13px 4px;
+    border-radius: 2px;
+  }
+
+  .navbar .navbar-right li a,
+  .navbar .navbar-right li a:hover,
+  .navbar .navbar-right li a:focus {
+    color: #494747;
+  }
+
+  .navbar .navbar-right li a:hover,
+  .navbar .navbar-right li a:focus {
+    background: rgb(90, 172, 65);
+    color: #fff;
+  }
+
+  .navbar .navbar-right li.active a {
+    background: #402817;
+    color: #fff;
+  }
+
+  .navbar .navbar-right li.active a:hover {
+    background: rgb(90, 172, 65);
+    color: #fff;
+  }
+
+  .navbar-toggle .icon-bar {
+    background: #fff;
+  }
+
+  .navbar-toggle {
+    border-color: #fff;
+    margin-top: 17px;
+    background: #807f7f;
+  }
+
+  .navbar-toggle.collapsed {
+    background: none;
+  }
+
+  .login-title {
+    margin: 30px 0;
+    font-size: 36px;
+  }
+
+  .sidebar {
+    position: fixed;
+    margin-top: 60px;
+  }
+
+  .sidebar a img {
+    border: 1px solid #dee0e3;
+  }
+
+  footer.landing {
+    height: 85px;
+    padding-top: 20px;
+    width: 100%;
+    margin: 0;
+    min-width: 1024px;
+    border: none;
+    background: #402817;
+    color: white;
+    position: static;    
+  }
+
+  footer.landing p {
+    color: #a09f9e;
+  }
+
+  footer.landing .brand {
+    display: block;
+    background: url("http://static.tumblr.com/l0w5y2g/Sxan0ydla/mongodb-logo-footer.png") center center no-repeat;
+    background-size: 133px 38px;
+    padding-left: 25px;
+    padding-top:10px;
+    width: 133px;
+    height: 38px;
+    text-indent: -9999px;
+  }
+
+  footer.landing .footer-copy {
+    font-size: 16px;
+    padding-top: 10px;
+    padding-right:22px;
+  }
+
+  footer.landing .container {
+    width: 1024px;
+    max-width: 1024px;
+    min-width: 1024px;
+  }
+
+  footer.landing .container a, 
+  footer.landing .container a:visited {
+    color: #a09f9e;
+  }
+
+  footer.landing .container a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* Tumblr Theme */
+  /***** Posts *****/
+  
+  .post {
+    background: #ffffff;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .post h3 {
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 0 0 6px 0;
+  }
+
+  .post h4 {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 0 0 6px 0;
+  }
+
+
+  .label {
+    font-size: 10px;
+    padding: 3px 4px 2px;
+    text-transform: uppercase;
+    border-radius: 0;
+    background: none;
+    color: #a09f9e;
+    text-shadow: none;    
+  }
+
+  .post h1, .post h2 {
+    font-size:18px;
+  }
+
+  .post h2 {
+    font-size:16px
+  }
+  
+  .post p {
+    margin: 12px 0 12px 0;
+  }
+
+  .post p.quote {
+    font-size: 36px;
+  }
+  
+  .post img { max-width: 575px; }
+  
+  .postmeta {
+    background: #f5f6f7;
+    color: #6f6763;
+    min-height: 25px;
+    overflow: hidden;
+    text-shadow: 1px 1px #fff;
+  }
+  
+  .postmeta a { color: #365c7f; }
+  
+  .postmeta p { padding: 5px 0; }
+  
+  .postmeta .posttime,
+  .postmeta .reblogged {
+    float: left;
+    margin-left: 10px;
+    padding-left: 16px;
+  }
+  
+  .postmeta .posttime { background: url(http://static.tumblr.com/2wjmz5y/zFwlauprl/simplethings-clock.png) no-repeat left center; padding-left: 18px; }
+  .postmeta .reblogged { background: url(http://static.tumblr.com/2wjmz5y/Jdhlapek1/simplethings-reblogged.png) no-repeat left center; }
+  
+  .postmeta .hiddentime { display: none !important; }
+
+  #pagination {
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 26px;
+    height: 34px;
+  }
+
+  .current-status {
+    background: #fff;
+    text-align: center;
+    font-weight: normal;
+    color: #494747;
+    margin:0 0 24px 0;
+    display: none;
+    padding: 48px 24px;
+  }
+
+  .sidebar .current-status,
+  .tag-title {
+    text-align: center;
+    margin-bottom: 24px;
+    padding: 24px 12px;
+    display: block;
+  }
+
+  .current-status h4,
+  .tag-title h4 {
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 1.2;
+  }
+
+  .sidebar .current-status h4,
+  .tag-title h4 {
+    font-size: 24px;
+  }
+
+  .current-status.good h4 {
+    color: #6ba442;
+  }
+
+  .current-status.warning h4 {
+    color: #ffb618;
+  }
+
+  .current-status.bad h4 {
+    color: #ed271c;
+  }
+
+  .current-status .label,
+  .tag-title .label {
+    color: #333;
+  }
+
+  .tag-title {
+    background: #fff;
+  }
+
+  .tag-title h4 {
+    color: #6e7c9f;
+  }
+  /*BUTTON STYLES*/
+  .btn {
+    font-weight: bold;
+    background: none;
+    border-radius: 2px;
+    -webkit-transition: all 250ms ease;
+       -moz-transition: all 250ms ease;
+            transition: all 250ms ease;
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: none;
+  }
+
+  .btn:hover,
+  .btn:focus {
+    background: none;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn:active,
+  .btn.active {
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  }
+
+  .btn-default {
+    background: rgba(255,255,255,0.5);
+    border-color: #dee0e3;
+    color: #402817;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-weight: normal;
+  }
+
+  .btn-default.current_page {
+    border-color: #333;
+  }
+
+  .btn-default:hover,
+  .btn-default:focus,
+  .btn-default:active,
+  .btn-default.active,
+  .open .dropdown-toggle.btn-default {
+    box-shadow: none;
+    background: #f5f6f7;
+    border-color: #bfbfbe;
+  }
+
+  .btn-default:active,
+  .btn-default.active,
+  .open .dropdown-toggle.btn-default {
+    background-image: none;
+    background: #ebebed;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  }
+
+  .btn-info {
+    color: #6ba442;
+    background-color: transparent;
+    border-color: #89b668;
+    box-shadow: none;
+  }
+
+  .btn-info:hover,
+  .btn-info:focus,
+  .btn-info:active,
+  .btn-info.active,
+  .open .dropdown-toggle.btn-info {
+    color: #507b32;
+    background-color: #eff5eb;
+    border-color: #6ba442;
+    box-shadow: none;
+  }
+
+  .btn.home {
+    
+  }
+
+  .post-meta {
+    margin: 24px 0;
+    padding-top: 24px;
+    border-top: 1px solid #ebebed;
+  }
+
+  .post-meta div {
+    padding: 0;
+  }
+
+  .social a {
+    background: #a09f9e;
+    color: #fff;
+    font-size: 13px;
+    line-height: 24px;
+    margin-left: 6px;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .social a.google-plus {
+    padding-left: 2px;
+  }
+
+  .social a:hover {
+    background: #6ba442;
+  }
+
+  .tags {
+    margin: 0;
+    padding: 0;
+  }
+
+  .tags .label {
+    background: #a09f9e;
+    margin: 0 3px 0 0;
+  }
+
+  .tags .label:first-child {
+    background: none;
+  }
+
+  .tags .label a {
+    color: #ffffff;
+  }
+
+  .signup-btn {
+      background-color: #5aac41;
+      padding: 10px;
+      margin: 0 0 10px 0;
+      text-align: center;
+  }
+
+  a .signup-btn {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  /* desert scheme ported from vim to google prettify */
+  pre.prettyprint { 
+    display: block; 
+    background-color: #f5f6f7; 
+    border-radius: 0; 
+    border: none; 
+    border-left: 6px solid #402817;
+    background-image: url(http://static.tumblr.com/l0w5y2g/HAFn0ygmo/syntax-bg.png);
+    background-size: 24px 24px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  pre .nocode { background-color: none; color: #402817 }
+  pre .str { color: #6ba442 } /* string  */
+  pre .kwd { color: #84a1bf; font-weight: bold }
+  pre .com { color: #bfbfbe } /* comment */
+  pre .typ { color: #98fb98 } /* type */
+  pre .lit { color: #e05426 } /* literal */
+  pre .pun { color: #bfbfbe } /* punctuation */
+  pre .pln { color: #807f7f } /* plaintext */
+  pre .tag { color: #326294; font-weight: bold } /* html/xml tag */
+  pre .atn { color: #6ba442; font-weight: bold } /* attribute name */
+  pre .atv { color: #e05426 } /* attribute value */
+  pre .dec { color: #e05426 } /* decimal */
+
+  /* Specify class=linenums on a pre to get line numbering */
+  ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE } /* IE indents via margin-left */
+  li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+  /* Alternate shading for lines */
+  li.L1,li.L3,li.L5,li.L7,li.L9 { }
+
+  @media print {
+    pre.prettify { background-color: none }
+    pre .str, code .str { color: #060 }
+    pre .kwd, code .kwd { color: #006; font-weight: bold }
+    pre .com, code .com { color: #600; font-style: italic }
+    pre .typ, code .typ { color: #404; font-weight: bold }
+    pre .lit, code .lit { color: #044 }
+    pre .pun, code .pun { color: #440 }
+    pre .pln, code .pln { color: #000 }
+    pre .tag, code .tag { color: #006; font-weight: bold }
+    pre .atn, code .atn { color: #404 }
+    pre .atv, code .atv { color: #060 }
+  }
+
+
+
+  /*REMOVE after status feed is working*/
+
+  .sidebar .current-status {
+    display: none;
+  }
+  
+  .rss {
+   background: url(http://www.10gen.com/sites/default/files/other/icons-10gen-blog.png) no-repeat right top;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    position: absolute;
+    top: -52px;
+    right: 0;
+  }
+
+
+  </style>
+<link rel="alternate" href="android-app://com.tumblr/tumblr/x-callback-url/blog?blogName=mongodb%26postID=32866457221" />
+<link rel="alternate" href="ios-app://305343404/tumblr/x-callback-url/blog?blogName=mongodb&postID=32866457221" />
+<link rel="alternate" type="application/json+oembed" href="https://www.tumblr.com/oembed/1.0?url=http://blog.mongodb.org/post/32866457221/password-authentication-with-mongoose-part-1" title="Password Authentication with Mongoose Part 1
+This post is Part 1 (of 2) on implementing secure username/password authentication for your Mongoose User models, originally posted on Jeremy Martin&rsquo;s DevSmash Blog. In this first installment, we will..."/>
+<script src="http://assets.tumblr.com/assets/scripts/tumblelog_post_message_queue.js?_v=8b0553f75283ecbeb78be24f096f4c2c"></script>
+
+<meta name="keywords" content="security,safety,password authentication,encryption,node.js" />
+<!-- GOOGLE CAROUSEL --><script type="application/ld+json">{"@type":"SocialMediaPosting","url":"http:\/\/blog.mongodb.org\/post\/32866457221\/password-authentication-with-mongoose-part-1","mainEntityOfPage":true,"datePublished":"2012-10-04T10:45:00-04:00","author":"mongodb","headline":"Password Authentication with Mongoose Part 1","articleBody":"This post is Part 1 (of 2) on implementing secure username\/password authentication for your Mongoose User models, originally posted on Jeremy Martin\u2019s DevSmash Blog. In this first installment, we will discuss how to implement one-way encryption of user passwords with bcrypt, and how to subsequently...","@context":"http:\/\/schema.org"}</script>
+<link rel="canonical" href="http://blog.mongodb.org/post/32866457221/password-authentication-with-mongoose-part-1" />
+
+</head>
+<body class="mmsBody">
+<!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-JQHP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-JQHP');</script>
+<!-- End Google Tag Manager -->
+  <div id="page">
+    <div class="navbar navbar-static-top">
+      <div class="navbar-inner">
+        <div class="container for-nav">
+          <div class="row">
+            <div class="col-sm-5">
+              <a class="brand pull-left" href="http://blog.mongodb.org/"><img src="//media.mongodb.org/mongodb-logo-web-tagline.png"/></a>
+            </div>
+            <div class="col-sm-7">
+              <ul class="nav navbar-nav nav-landing navbar-right" role="navigation">
+                <!-- <li><a href="http://blog.mongodb.org">Home</a></li> -->
+                <li><a href="http://docs.mongodb.org">Docs</a></li>
+                <li><a href="http://university.mongodb.com">Learn</a></li>
+                <li><a href="http://www.mongodb.org/downloads">Downloads</a></li>
+                <li><a href="http://www.mongodb.org/get-involved">Community</a></li>
+                <!-- <li><a href="http://www.mongodb.org/about/production-deployments/">Production Users</a></li> -->
+                <!-- <li class="active"><a href="http://blog.mongodb.org/">Blog</a></li> -->
+              </ul>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+    <div class="container main">
+      <div class="row">
+        <div class="col-xs-8">
+            
+            <div id="pagination">
+              <div class="row">
+                <div class="col-xs-9 text-left">
+                  <a class="btn btn-info home" href="http://blog.mongodb.org/"><span class="icon-home"></span></a>
+                  
+                </div>
+                <div class="col-xs-3 text-right">
+                  
+                  
+                    <a href="http://blog.mongodb.org/post/32740687001" class="prev-post btn btn-default"><span class="icon-angle-left"></span></a>
+                    <a href="http://blog.mongodb.org/post/33700094220" class="next-post btn btn-default"><span class="icon-angle-right"></span></a>
+                  
+                </div>
+              </div>
+            </div> <!-- END pagination -->
+
+            
+
+            
+                
+                <div class="post post-text">
+                  <h3><a href="http://blog.mongodb.org/post/32866457221/password-authentication-with-mongoose-part-1">Password Authentication with Mongoose Part 1</a></h3>
+                  <p class="date label">
+                    <span class="month">Oct</span> <span class="day">4</span> • Posted 3 years ago
+                  </p>
+                  <div class="body-text">
+                    <p><span class="translate"><em>This post is Part 1 (of 2) on implementing secure username/password authentication for your Mongoose User models, originally posted on Jeremy Martin&rsquo;s <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fdevsmash.com%2Fblog%2Fpassword-authentication-with-mongoose-and-bcrypt&amp;t=M2YzY2MzZmZmOWMwN2VjN2E3OTBmNTVmZTgxMDQ5ZDIyNTBjMGMyMCxvbDhWUlZKQg%3D%3D">DevSmash Blog</a>. In this first installment, we will discuss how to implement one-way encryption of user passwords with <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBcrypt&amp;t=OTQxZDE2NzQ3ZjNjMmYyZTI0NThiM2UzMWRiYWVkYzhlNzRhZWY3MyxvbDhWUlZKQg%3D%3D">bcrypt</a>, and how to subsequently use the encrypted password for login verification.</em> </span></p>
+
+<p><em>Update: <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fdevsmash.com%2Fblog%2Fimplementing-max-login-attempts-with-mongoose&amp;t=OGRiN2FkOTU4NjgzMmM5ZmU3YzViZGQ5MTc3OTZmMTY5MTllMjZlOSxvbDhWUlZKQg%3D%3D">Password Authentication with Mongoose (Part 2): Account Locking</a> is now live!</em> <!-- more --></p>
+
+<h4>Cast of Characters</h4>
+
+<h5>Mongoose</h5>
+
+<p>From the <a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fgithub.com%2Flearnboost%2Fmongoose&amp;t=YTYxMzQzOTg4NTk0OGIzZWQ3Yjk4NmZmMDNjZGYyMjlmNDVhNTY3YixvbDhWUlZKQg%3D%3D">Mongoose GitHub repo</a>: &ldquo;Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment.&rdquo; </p>
+
+<p>In other words, Mongoose provides a model layer for interacting with your MongoDB collections from Node. This model layer provides a common location for implementing document validation, persistence indirection, and other logic that should be abstracted from the business layer. <strong>Website:</strong> <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fmongoosejs.com%2F&amp;t=MDBmNGI5YmU4OTdlMTJkYzM5YzhjYjljNTNlOTY5OWJhYjk2Zjg2OCxvbDhWUlZKQg%3D%3D">http://mongoosejs.com/</a> </p>
+
+<h5>node.bcrypt.js</h5>
+
+<p>node.bcrypt.js is, well, bcrypt for Node. If you&rsquo;re not familiar with bcrypt and why it&rsquo;s a good thing, then I highly recommended Coda Hale&rsquo;s excellent article on <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fcodahale.com%2Fhow-to-safely-store-a-password%2F&amp;t=MzRjNGJlNmNlMTcwMmE5NGUyN2ExY2IwY2EwYTZlMzM2NDAxNTQ0OCxvbDhWUlZKQg%3D%3D">how to safely store a password</a>. <strong>Website:</strong> <a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fgithub.com%2Fncb000gt%2Fnode.bcrypt.js%2F&amp;t=NWY0ZmRkYmFhY2E5OTg1MjA5YjkxMGJlY2U2NmMwOTU1NDM0YTIxYSxvbDhWUlZKQg%3D%3D">https://github.com/ncb000gt/node.bcrypt.js/</a> </p>
+
+<h4>Objectives</h4>
+
+<p>Before we get into the code, let&rsquo;s identify some objectives/requirements in our initial username/password authentication implementation: </p>
+
+<ul><li><p>The User model should fully encapsulate the password encryption and verification logic</p></li>
+<li><p>The User model should ensure that the password is <em>always</em> encrypted before saving</p></li>
+<li><p>The User model should be resistant to program logic errors, like double-encrypting the password on user updates bcrypt interactions should be performed asynchronously to avoid blocking the event loop (bcrypt also exposes a synchronous API)</p></li>
+</ul><h5>Step 1: The User Model</h5>
+
+<p>Even if you aren&rsquo;t too familiar with Mongoose schemas and models, the code below should be fairly easy to follow. It wouldn&rsquo;t be a bad idea to read through <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fmongoosejs.com%2Fdocs%2Fguide.html&amp;t=MDc2N2E1YTVkYWYwMmUwMTA0YmU3NTE1OGNiZGU4Nzk0NWEyOTAxOCxvbDhWUlZKQg%3D%3D">some of the basics</a>though. To start things off, let&rsquo;s create our bare bones representation of a user; for the sake of this article, all we need is a username and a password:</p>
+
+<script src="https://gist.github.com/3832893.js" type="text/javascript">// <![CDATA[
+ 
+// ]]></script><h5>Step 2: Password Hashing Middleware*</h5>
+
+<p>You might have noticed the unused <code>bcrypt</code> and <code>SALT_WORK_FACTOR</code> references above - we&rsquo;ll be using them in this step. As a quick refresher, the purpose of the <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSalt_cryptography&amp;t=ZDY1OWE0ZDI0NDg0ZjdlNWFjMmFmMGIwYTUwZjU3NjdiNzQ0Y2VkMixvbDhWUlZKQg%3D%3D">salt</a> is to defeat <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FRainbow_table&amp;t=MzQ2NTc2MzcyNTcwOWMyOTI4Njk5ZWJlNmE2ZTYzYjQzMmI0NzlhNixvbDhWUlZKQg%3D%3D">rainbow table attacks</a> and to resist brute-force attacks in the event that someone has gained access to your database. bcrypt in particular uses a key setup phase that is derived from <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBlowfish_cipher&amp;t=NzRlNmM0MzRlNjdiYjg2OTRiZDRmYzM5NWIyMWIwNTM5MWRhMWEzNSxvbDhWUlZKQg%3D%3D">Blowfish</a>. </p>
+
+<p>For the purposes of this article, all you need to know about that is that the key setup phase is very computationally expensive, which is actually a good thing when trying to thwart brute-force attacks. <em>How</em> expensive depends on how many rounds or iterations the key setup phase uses - this is where our <code>SALT_WORK_FACTOR</code>comes into play. The default used by node.bcrypt.js is 10, so I went ahead and made our explicit value the same. </p>
+
+<p>Alright, let&rsquo;s get back to the code.</p>
+
+<p>The first thing we want to add to our User model is some Mongoose middleware that will automatically hash the password before it&rsquo;s saved to the database. Here&rsquo;s what that looks like:</p>
+
+<script src="https://gist.github.com/3832874.js" type="text/javascript">// <![CDATA[
+ 
+// ]]></script><p>The above code will accomplish our goal of always hashing the password when a document is saved to the database. There are a couple things to be aware of though: Because passwords are not hashed until the document is saved, be careful if you&rsquo;re interacting with documents that were not retrieved from the database, as any passwords will still be in cleartext. Mongoose middleware is not invoked on <code>update()</code> operations, so you must use a <code>save()</code>if you want to update user passwords. Step 3: Password Verification Now that we have our User model and we&rsquo;re hashing passwords, the only thing left is to implement password verification. Adding this to our model turns out to be just a few more lines of code:</p>
+
+<p><script src="https://gist.github.com/3832839.js" type="text/javascript">// <![CDATA[
+ 
+// ]]></script>
+Simple enough. Altogether Now Here&rsquo;s what our User model looks like after adding our middleware and password verification method:
+<script src="https://gist.github.com/3832833.js" type="text/javascript">// <![CDATA[
+ 
+// ]]></script>
+Sample Usage Assuming that you&rsquo;ve saved the above code as <code>user-model.js</code>, here&rsquo;s how you would go about testing it:
+<script src="https://gist.github.com/3832812.js" type="text/javascript">// <![CDATA[
+ 
+// ]]></script>
+&ldquo;` Next Steps This post was just Part 1 on implementing secure username/password authentication for your Mongoose User models. Stay tuned for Part 2, in which we&rsquo;ll discuss preventing brute-force attacks by enforcing a maximum number of failed login attempts. <em>Thanks for reading!</em></p>
+
+<p><em>Jeremy Martin is the creator of (recently launched) <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fdevsmash.com&amp;t=ZDNkMWFjNWEzN2U1Y2ExN2E2NjgwMzI4NDIwMDc5NzMzNmQwMDJlOCxvbDhWUlZKQg%3D%3D">DevSmash.com</a>, a software developer and Open Source Evangelist at his <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fsparcedge.com&amp;t=NTQ3NWY3NWE3ZmIxNzBmZjg1ODE0ZjA2NDhjMzFkYzg0MDE5NDU4YixvbDhWUlZKQg%3D%3D">day job</a>, a Node.js contributor, MongoDB fan boy, and husband to the greatest gal on the planet. Online he goes by <a href="http://twitter.com/jmar777">@jmar777</a>. <em>Update: <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fdevsmash.com%2Fblog%2Fimplementing-max-login-attempts-with-mongoose&amp;t=OGRiN2FkOTU4NjgzMmM5ZmU3YzViZGQ5MTc3OTZmMTY5MTllMjZlOSxvbDhWUlZKQg%3D%3D">Password Authentication with Mongoose (Part 2): Account Locking</a> is now live!</em></em></p>
+                  </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                  <div class="post-meta">
+                    <div class="col-xs-9">
+                      
+                      <ul class="tags">
+                        <li class="label">Tags: </li>
+                        <li class="label"><a href="http://blog.mongodb.org/tagged/authentication">authentication</a> </li><li class="label"><a href="http://blog.mongodb.org/tagged/incryption">incryption</a> </li><li class="label"><a href="http://blog.mongodb.org/tagged/mongodb">mongodb</a> </li><li class="label"><a href="http://blog.mongodb.org/tagged/mongoose">mongoose</a> </li><li class="label"><a href="http://blog.mongodb.org/tagged/node.js">node.js</a> </li><li class="label"><a href="http://blog.mongodb.org/tagged/encryption">encryption</a> </li><li class="label"><a href="http://blog.mongodb.org/tagged/security">security</a> </li><li class="label"><a href="http://blog.mongodb.org/tagged/safety">safety</a> </li><li class="label"><a href="http://blog.mongodb.org/tagged/password-authentication">password authentication</a> </li>
+                      </ul>
+                      
+                    </div>
+                    <div class="col-xs-3">
+                      <div class="social text-right">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fblog.mongodb.org%2Fpost%2F32866457221%2Fpassword-authentication-with-mongoose-part-1" target="_blank"><span class="icon-facebook"></span></a>
+                        <a id="ref_tw" href="http://twitter.com/home?status=Password Authentication with Mongoose Part 1+http%3A%2F%2Fblog.mongodb.org%2Fpost%2F32866457221%2Fpassword-authentication-with-mongoose-part-1"  onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600');return false;"><span class="icon-twitter"></span></a>
+                        <a id="ref_gp" href="https://plus.google.com/share?url=http%3A%2F%2Fblog.mongodb.org%2Fpost%2F32866457221%2Fpassword-authentication-with-mongoose-part-1"
+onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600');return false" class="google-plus"><span class="icon-google-plus"></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+            
+            
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'mongodbblog'; // Required - Replace <example> with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the </noscript>
+
+
+
+          
+            <div id="pagination">
+              <div class="row">
+                <div class="col-xs-9 text-left">
+                  <a class="btn btn-info home" href="http://blog.mongodb.org/"><span class="icon-home"></span></a>
+                  
+                </div>
+                <div class="col-xs-3 text-right">
+                  
+                  
+                    <a href="http://blog.mongodb.org/post/32740687001" class="prev-post btn btn-default"><span class="icon-angle-left"></span></a>
+                    <a href="http://blog.mongodb.org/post/33700094220" class="next-post btn btn-default"><span class="icon-angle-right"></span></a>
+                  
+                </div>
+              </div>
+            </div> <!-- END pagination -->
+
+            
+              
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = 'mongodb'; // Required - Replace <example> with your forum shortname
+
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the </noscript>
+                
+              
+            
+
+        </div> <!-- END col -->
+        <div class="col-xs-4">
+          <div class="sidebar">
+          <a href="http://blog.mongodb.org/rss" target="_blank" class="rss"></a>
+          <!-- This is the ``adblock -->
+            <div id='div-gpt-ad-1389988495352-0'>
+              <script type='text/javascript'>
+                googletag.cmd.push(function() {
+                  googletag.display('div-gpt-ad-1389988495352-0');
+                });
+              </script>
+            </div>
+            <!---this is the end of the adblock-->
+          </div>
+        </div> <!-- END col -->
+      </div> <!-- END row -->
+    </div> <!-- END container -->
+  </div> <!-- END page -->
+  <footer class="landing">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+          <a class="brand" href="http://mongodb.com" target="_blank"><img class="logo" src="http://media.mongodb.org/logo-mongodb-header.png" alt="MongoDB Logo"></a>
+        </div>
+        <div class="col-sm-10">
+          <p class="footer-copy text-right">©2014 MongoDB, Inc. • <a href="https://www.mongodb.org/get-involved">Help &amp; Support</a> • +1 (866) 237-8815</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script>
+    /*STATUS FEED uncomment when the feed is ready
+    var statusPage = function() {
+      var tag = $(".current-tag").html();
+      if (tag==="mms system status") {
+        //$(".current-status.large").show();
+        //$(".sidebar .current-status").hide();
+        //$(".tag-title").hide();
+      } else {
+        //$(".current-status.large").hide();
+        //$(".sidebar .current-status").show();
+        //$(".tag-title").show();
+      }
+    }
+    statusPage();*/
+});  
+</script>
+<iframe scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0; z-index:9999;" id="ga_target"></iframe><script type="text/javascript">
+    (function(){
+        var analytics_frame = document.getElementById('ga_target');
+        var analytics_iframe_loaded;
+        var user_logged_in;
+        var blog_is_nsfw = 'No';
+        var addthis_enabled = false;
+
+        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+        var eventer = window[eventMethod];
+        var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+        eventer(messageEvent,function(e) {
+            var message = (e.data && e.data.split) ? e.data.split(';') : '';
+            switch (message[0]) {
+                case 'analytics_iframe_loaded':
+                    analytics_iframe_loaded = true;
+                    postCSMessage();
+                    postGAMessage();
+                    postATMessage();
+                    postRapidMessage();
+                    break;
+                case 'user_logged_in':
+                    user_logged_in = message[1];
+                    postGAMessage();
+                    postATMessage();
+                    break;
+            }
+        }, false);
+
+        analytics_frame.src = "https://secure.assets.tumblr.com/analytics.html?499b7673d1672b0349955626f3bc719d#" +
+                              "http://blog.mongodb.org";
+        function postGAMessage() {
+            if (analytics_iframe_loaded && user_logged_in) {
+                var is_ajax = false;
+                analytics_frame.contentWindow.postMessage(['tick_google_analytics', is_ajax, user_logged_in, blog_is_nsfw, '/post/32866457221/password-authentication-with-mongoose-part-1?route=%2Fpost%2F%3Aid%2F%3Asummary'].join(';'), analytics_frame.src.split('/analytics.html')[0]);
+            }
+        }
+        function postCSMessage() {
+            COMSCORE = true;
+            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
+        }
+        function postATMessage() {
+            if (addthis_enabled && analytics_iframe_loaded) {
+                analytics_frame.contentWindow.postMessage('enable_addthis', analytics_frame.src.split('/analytics.html')[0]);
+            }
+        }
+        function postRapidMessage() {
+                            if (analytics_iframe_loaded) {
+                    var is_ajax = '';
+                    var route = '/post/:id/:summary';
+                    var tumblelog_id = '871284';
+                    var yahoo_space_id = '1197719230';
+                    var rapid_client_only = '1';
+                    var apv = '1';
+                    var rapid_ex = '';
+
+                    analytics_frame.contentWindow.postMessage(
+                        [
+                            'tick_rapid', is_ajax, route, user_logged_in, tumblelog_id,
+                            yahoo_space_id, rapid_client_only, apv, rapid_ex
+                        ].join(';'),
+                        analytics_frame.src.split('/analytics.html')[0]
+                    );
+                }
+                    }
+    })();
+</script><script type="text/javascript">!function(s){s.src='https://px.srvcs.tumblr.com/impixu?T=1457419934&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvYmxvZy5tb25nb2RiLm9yZ1wvcG9zdFwvMzI4NjY0NTcyMjFcL3Bhc3N3b3JkLWF1dGhlbnRpY2F0aW9uLXdpdGgtbW9uZ29vc2UtcGFydC0xIiwicmVxdHlwZSI6MCwicm91dGUiOiJcL3Bvc3RcLzppZFwvOnN1bW1hcnkifQ==&U=FCIFEALEIJ&K=969bd0c8f105bedbf47ba208c2d65b21595ab3a718e0f0257763c807c6f78aa7&R=https%3A%2F%2Fwww.google.com%2F'.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://px.srvcs.tumblr.com/impixu?T=1457419934&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvYmxvZy5tb25nb2RiLm9yZ1wvcG9zdFwvMzI4NjY0NTcyMjFcL3Bhc3N3b3JkLWF1dGhlbnRpY2F0aW9uLXdpdGgtbW9uZ29vc2UtcGFydC0xIiwicmVxdHlwZSI6MCwicm91dGUiOiJcL3Bvc3RcLzppZFwvOnN1bW1hcnkiLCJub3NjcmlwdCI6MX0=&U=FCIFEALEIJ&K=d46254633a5e1ae84b98461c2570b745f0d62f0858e6497d7f0f2d393842d18e&R=https%3A%2F%2Fwww.google.com%2F"></noscript><script >
+        (function (w,d) {
+            'use strict';
+            var l = function(el, type, listener, useCapture) {
+                el.addEventListener ?
+                el.addEventListener(type, listener, !!useCapture) :
+                el.attachEvent && el.attachEvent('on' + type, listener, !!useCapture);
+            };
+            var a = function () {
+                                if (d.getElementById('tumblr-cdx')) {
+                    return;
+                }
+                var s = d.createElement('script');
+                var el = d.getElementsByTagName('script')[0];
+                s.async = true;
+                s.src = 'http://assets.tumblr.com/assets/scripts/vendor/cedexis/cedexis.radar.js?_v=7450eec657e34e1e41dac4e1af96a170';
+                s.type = 'text/javascript';
+                s.id = 'tumblr-cdx';
+                d.body.appendChild(s);
+            };
+            l(w,'load',a);
+        }(window, document));
+</script><script type="text/javascript">!function(s){s.src='https://px.srvcs.tumblr.com/impixu?T=1457419934&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Jsb2cubW9uZ29kYi5vcmdcL3Bvc3RcLzMyODY2NDU3MjIxXC9wYXNzd29yZC1hdXRoZW50aWNhdGlvbi13aXRoLW1vbmdvb3NlLXBhcnQtMSIsInJlcXR5cGUiOjAsInJvdXRlIjoiXC9wb3N0XC86aWRcLzpzdW1tYXJ5IiwicG9zdHMiOlt7InBvc3RpZCI6IjMyODY2NDU3MjIxIiwiYmxvZ2lkIjoiODcxMjg0Iiwic291cmNlIjozM31dfQ==&U=CGAOFHLFFH&K=b483c7812ff763f4722d04d89f78dbbc0acf6982c85dc3115f250cc48bff1337&R=https%3A%2F%2Fwww.google.com%2F'.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://px.srvcs.tumblr.com/impixu?T=1457419934&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Jsb2cubW9uZ29kYi5vcmdcL3Bvc3RcLzMyODY2NDU3MjIxXC9wYXNzd29yZC1hdXRoZW50aWNhdGlvbi13aXRoLW1vbmdvb3NlLXBhcnQtMSIsInJlcXR5cGUiOjAsInJvdXRlIjoiXC9wb3N0XC86aWRcLzpzdW1tYXJ5IiwicG9zdHMiOlt7InBvc3RpZCI6IjMyODY2NDU3MjIxIiwiYmxvZ2lkIjoiODcxMjg0Iiwic291cmNlIjozM31dLCJub3NjcmlwdCI6MX0=&U=CGAOFHLFFH&K=d90d6b09a63de5548f522c5ca196afa2119d7408d637697f4bde9eb8673c2463&R=https%3A%2F%2Fwww.google.com%2F"></noscript>
+<noscript id="bootloader" data-bootstrap="{&quot;Components&quot;:{&quot;TumblelogIframe&quot;:{&quot;tumblelogBundleSrc&quot;:&quot;http:\/\/assets.tumblr.com\/client\/prod\/standalone\/tumblelog\/index.js?_v=215eddf5750483d3f26fa8044b486cfa&quot;,&quot;tumblelogName&quot;:&quot;mongodb&quot;,&quot;isLoggedIn&quot;:false,&quot;isFriend&quot;:false,&quot;formKey&quot;:&quot;&quot;,&quot;tumblelogTitle&quot;:&quot;The MongoDB Community Blog&quot;,&quot;tumblelogAvatar&quot;:&quot;http:\/\/38.media.tumblr.com\/avatar_f64075d5c5cf_40.png&quot;,&quot;tumblelogHost&quot;:&quot;http:\/\/blog.mongodb.org&quot;,&quot;brag&quot;:true,&quot;currentPage&quot;:&quot;1&quot;,&quot;postId&quot;:&quot;32866457221&quot;,&quot;src&quot;:&quot;http:\/\/blog.mongodb.org\/post\/32866457221\/password-authentication-with-mongoose-part-1&quot;,&quot;postUrl&quot;:&quot;&quot;,&quot;isBlocked&quot;:null,&quot;isAdmin&quot;:false,&quot;lookupButtonUrl&quot;:&quot;&quot;,&quot;showSpamButton&quot;:false,&quot;showRootPostButton&quot;:false,&quot;rootPostUrl&quot;:&quot;&quot;,&quot;showRadarPostButton&quot;:false,&quot;radarKeys&quot;:&quot;&quot;,&quot;isUniblocked&quot;:false,&quot;isNsfw&quot;:false,&quot;isAdult&quot;:false,&quot;isSpam&quot;:false,&quot;isPrimaryBlog&quot;:false,&quot;canEdit&quot;:false,&quot;canReblogSelf&quot;:false,&quot;showLikeButton&quot;:false,&quot;showReblogButton&quot;:false,&quot;reblogUrl&quot;:&quot;&quot;,&quot;showFanMailButton&quot;:false,&quot;showMessagingButton&quot;:false,&quot;loginCheckIframeSrc&quot;:&quot;http:\/\/assets.tumblr.com\/assets\/html\/iframe\/login_check.html?_v=282357db21d8a5883cc1c780ace4cb5f&quot;,&quot;appInstallUrl&quot;:&quot;https:\/\/go.onelink.me\/893408789?pid=tumblr_blog_network\u0026c=tumblr_blog_network\u0026af_sub3=blog_name&quot;}},&quot;Flags&quot;:{&quot;doods&quot;:&quot;eyJmaWx0ZXJfbnNmdyI6dHJ1ZSwia2V5Y29tbWFuZF9hdXRvX3BhZ2luYXRlIjp0cnVlLCJsb2dnZWRfb3V0X3NlYXJjaCI6dHJ1ZSwiYXJjaGl2ZS1wbHVzIjp0cnVlLCJzZWN1cmVfZm9ybV9rZXkiOnRydWUsInNlY3VyZV9mb3JtX2tleV9mdWxseV9vbiI6dHJ1ZSwidHVtYmxlbG9nX3BvcG92ZXIiOnRydWUsImNhbm9uaWNhbF91cmxfd3JpdGVzIjp0cnVlLCJlbmFibGVfY2FwdHVyZV9qcyI6dHJ1ZSwicHJpbWFfcG9zdF9mb3JtcyI6dHJ1ZSwibG9ja2VkX3JlYmxvZ191aSI6dHJ1ZSwibG9ja2VkX3JlYmxvZ191aV9wYXJzZV90ZXN0Ijp0cnVlLCJ0YWJsZXRfYmFubmVyX2FjdGl2ZSI6dHJ1ZSwibW9iaWxlX2Jhbm5lcl9hY3RpdmUiOnRydWUsImxvZ19zZWFyY2hfYm94Ijp0cnVlLCJ1c2VyX21lbnRpb25zIjp0cnVlLCJodG1sNV9hdWRpb19wbGF5ZXIiOnRydWUsInBvcG92ZXJfcmVjb21tZW5kYXRpb25zIjp0cnVlLCJpbmRhc2hfcmVjb21tZW5kYXRpb25zIjp0cnVlLCJwb3B0aWNhX3R1bWJsZWxvZ19wb3BvdmVycyI6dHJ1ZSwidHVtYmxyX3R2Ijp0cnVlLCJkZXByZWNhdGVfZmVhdHVyZWRfdGFncyI6dHJ1ZSwicmVibG9nX3VpX3JlZnJlc2giOnRydWUsInRhYl9zd2l0Y2hlciI6dHJ1ZSwiZmFzdF9jb21wb3NlIjp0cnVlLCJkYXNoYm9hcmRfcmVmcmVzaCI6dHJ1ZSwibW9iaWxlX3dlYl9waG90b3NldHMiOnRydWUsIm1vYmlsZV93ZWJfZ2F0ZSI6dHJ1ZSwibW9iaWxlX3dlYl9wYWdlX3RpdGxlcyI6dHJ1ZSwibW9iaWxlX3dlYl9zZWFyY2giOnRydWUsIm1vYmlsZV93ZWJfc2VhcmNoX2ZpbHRlciI6dHJ1ZSwibW9iaWxlX3dlYl9hYnVzZV9mb3JtIjp0cnVlLCJkb250X2Nhc3RfanNfZm9sbG93cyI6dHJ1ZSwiYWRzX25ld192ZW5kb3JfYnV0dG9ucyI6dHJ1ZSwiYmxvY2tfZmVhdHVyZSI6dHJ1ZSwicmVhY3RpdmF0aW9uX2Zsb3ciOnRydWUsImd1bHBqc19hZG1pbiI6dHJ1ZSwiZW5hYmxlX2pzX2VwaGVtZXJhbF9sb2ciOnRydWUsImxvZ19sYWR5Ijp0cnVlLCJjc2xvZ2dlcl9qcyI6dHJ1ZSwiZGlzY292ZXJ5X2h1Yl9hY2Nlc3MiOnRydWUsImhlYWRlcl9hY2NvdW50X21lbnUiOnRydWUsImVuYWJsZV9wcmltYV9zaGFyZV9wb3BvdmVyIjp0cnVlLCJlbmFibGVfc2hhcmVfZW1iZWRfY29kZSI6dHJ1ZSwicGludGVyZXN0X3NoYXJpbmciOnRydWUsInJlZGRpdF9zaGFyaW5nIjp0cnVlLCJwb3N0X2l0X2ZvcndhcmQiOnRydWUsInBlZXByX3NlYXJjaF9hbmRfZmlsdGVyIjp0cnVlLCJpbnRlcm5zX3BhZ2UiOnRydWUsImZvbGxvd2VkX3NlYXJjaGVzX2JpZ193ZWIiOnRydWUsImRpc2FibGVfcHVibGljX3JlcGxpZXMiOnRydWUsImRpc2FibGVfeWFob29fYl9jb29raWUiOnRydWUsInByaW1hX3R1bWJsZWxvZ19idW5kbGUiOnRydWV9&quot;},&quot;Context&quot;:{&quot;name&quot;:&quot;default&quot;,&quot;time&quot;:1457419934000,&quot;userinfo&quot;:{&quot;primary&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;channels&quot;:[]},&quot;hosts&quot;:{&quot;assets_host&quot;:&quot;http:\/\/assets.tumblr.com&quot;,&quot;secure_assets_host&quot;:&quot;https:\/\/secure.assets.tumblr.com&quot;,&quot;www_host&quot;:&quot;http:\/\/www.tumblr.com&quot;,&quot;secure_www_host&quot;:&quot;https:\/\/www.tumblr.com&quot;,&quot;embed_host&quot;:&quot;https:\/\/embed.tumblr.com&quot;,&quot;safe_host&quot;:&quot;http:\/\/safe.txmblr.com&quot;,&quot;platform_host&quot;:&quot;http:\/\/platform.tumblr.com&quot;},&quot;language&quot;:&quot;en_US&quot;,&quot;language_simple&quot;:&quot;en&quot;},&quot;Translations&quot;:[]}"></noscript>
+<script src="http://assets.tumblr.com/client/prod/standalone/tumblelog/index.js?_v=215eddf5750483d3f26fa8044b486cfa"></script>
+
+</body>
+</html>

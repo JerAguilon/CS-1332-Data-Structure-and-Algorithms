@@ -1,0 +1,10 @@
+CheckStyle 6.14.1
+CS 1332
+Spring 2016
+Version 1.0
+
+To run CheckStyle on your code, use the following command.
+
+    java -jar checkstyle-6.14.1.jar -c CS1332-checkstyle.xml /path/to/javafiles/MyClass.java
+
+    Ex. java -jar checkstyle-6.14.1.jar -c CS1332-checkstyle.xml ./src/*.java
